@@ -39,6 +39,8 @@
               <ul class="bg-base-100 rounded-t-none p-2">
                 <li><router-link to="/corrections/text_interpolation" class="btn btn-ghost">Text interpolation</router-link></li>
                 <li><router-link to="/corrections/attribute_binding" class="btn btn-ghost">Attribute binding</router-link></li>
+                <li><router-link to="/corrections/event_binding" class="btn btn-ghost">Event binding</router-link></li>
+                <li><router-link to="/corrections/tp_data_binding" class="btn btn-ghost">TP data binding</router-link></li>
               </ul>
             </details>
           </li>

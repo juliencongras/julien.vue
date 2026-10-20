@@ -75,6 +75,14 @@ const router = createRouter({
             path: '/corrections/attribute_binding',
             component: () => import('../views/corrections/correction-attribute-binding.vue')
         },
+        {
+            path: '/corrections/event_binding',
+            component: () => import('../views/corrections/correction-event-binding.vue')
+        },
+        {
+            path: '/corrections/tp_data_binding',
+            component: () => import('../views/corrections/correction-tp-data-binding.vue')
+        },
 
 
         {
