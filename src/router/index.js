@@ -88,6 +88,10 @@ const router = createRouter({
             path: '/exercices/dynamic_styling',
             component: () => import('../views/exercices/exercice-dynamic-styling.vue')
         },
+        {
+            path: '/exercices/conditional_rendering',
+            component: () => import('../views/exercices/exercice-conditional-rendering.vue')
+        },
 
         //Corrections
         {
