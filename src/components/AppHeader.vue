@@ -34,6 +34,7 @@
                 <li><router-link to="/exercices/event_binding" class="btn btn-ghost">Event binding</router-link></li>
                 <li><router-link to="/exercices/dynamic_styling" class="btn btn-ghost">Dynamic styling</router-link></li>
                 <li><router-link to="/exercices/conditional_rendering" class="btn btn-ghost">Conditional rendering</router-link></li>
+                <li><router-link to="/exercices/list_rendering" class="btn btn-ghost">List rendering</router-link></li>
               </ul>
             </details>
           </li>

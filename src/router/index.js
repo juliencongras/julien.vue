@@ -92,6 +92,10 @@ const router = createRouter({
             path: '/exercices/conditional_rendering',
             component: () => import('../views/exercices/exercice-conditional-rendering.vue')
         },
+        {
+            path: '/exercices/list_rendering',
+            component: () => import('../views/exercices/exercice-list-rendering.vue')
+        },
 
         //Corrections
         {
