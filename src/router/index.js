@@ -67,6 +67,11 @@ const router = createRouter({
             component: () => import('../views/exercices/exercice-event-binding.vue')
         },
 
+        {
+            path: '/corrections/text_interpolation',
+            component: () => import('../views/corrections/correction-text-interpolation.vue')
+        },
+
 
         {
             path: '/tp/data_binding',

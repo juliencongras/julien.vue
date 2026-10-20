@@ -35,6 +35,16 @@
         <ul class="menu menu-horizontal px-1">
           <li>
             <details>
+              <summary>Corrections</summary>
+              <ul class="bg-base-100 rounded-t-none p-2">
+                <li><router-link to="/corrections/text_interpolation" class="btn btn-ghost">Text interpolation</router-link></li>
+              </ul>
+            </details>
+          </li>
+        </ul>
+        <ul class="menu menu-horizontal px-1">
+          <li>
+            <details>
               <summary>TP</summary>
               <ul class="bg-base-100 rounded-t-none p-2">
                 <li><router-link to="/tp/data_binding" class="btn btn-ghost">Data binding</router-link></li>
