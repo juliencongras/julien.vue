@@ -1,5 +1,5 @@
 <template>
-    <div class="navbar bg-base-100 shadow-sm">
+    <div class="navbar bg-base-100 shadow-sm z-1">
         <a class="btn btn-ghost text-xl">Julien.vue</a>
         <router-link to="/home" class="btn btn-ghost">Home</router-link>
         <router-link to="/about" class="btn btn-ghost">About</router-link>
