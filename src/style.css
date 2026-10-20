@@ -10,3 +10,15 @@
     background-color: aqua;
     outline: 1px dashed silver;
 }
+
+.maClasseHello{
+    color: white;
+    background-color: brown;
+    outline: black solid 1px;
+}
+
+.maClasseWorld{
+    color: green;
+    background-color: blue;
+    outline: black dotted 2px;
+}

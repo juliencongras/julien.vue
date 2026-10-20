@@ -54,6 +54,7 @@
               <summary>TP</summary>
               <ul class="bg-base-100 rounded-t-none p-2">
                 <li><router-link to="/tp/data_binding" class="btn btn-ghost">Data binding</router-link></li>
+                <li><router-link to="/tp/dynamic_styling" class="btn btn-ghost">Dynamic styling</router-link></li>
               </ul>
             </details>
           </li>

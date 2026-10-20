@@ -100,6 +100,10 @@ const router = createRouter({
         {
             path: '/tp/data_binding',
             component: () => import('../views/tp/tp-data-binding.vue')
+        },
+        {
+            path: '/tp/dynamic_styling',
+            component: () => import('../views/tp/tp-dynamic-styling.vue')
         }
 
     ]
