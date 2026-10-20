@@ -1,2 +1,12 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+.buttonDynamicStylingClassOne{
+    outline: 3px black dotted;
+    background-color: red;
+}
+
+.buttonDynamicStylingClassTwo{
+    background-color: aqua;
+    outline: 1px dashed silver;
+}

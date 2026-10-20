@@ -74,6 +74,10 @@ const router = createRouter({
             path: '/exercices/event_binding',
             component: () => import('../views/exercices/exercice-event-binding.vue')
         },
+        {
+            path: '/exercices/dynamic_styling',
+            component: () => import('../views/exercices/exercice-dynamic-styling.vue')
+        },
 
         {
             path: '/corrections/text_interpolation',
