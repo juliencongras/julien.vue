@@ -71,6 +71,10 @@ const router = createRouter({
             path: '/corrections/text_interpolation',
             component: () => import('../views/corrections/correction-text-interpolation.vue')
         },
+        {
+            path: '/corrections/attribute_binding',
+            component: () => import('../views/corrections/correction-attribute-binding.vue')
+        },
 
 
         {
