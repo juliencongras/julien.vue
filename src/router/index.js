@@ -53,6 +53,10 @@ const router = createRouter({
             path: '/lessons/text_interpolation',
             component: () => import('../views/lessons/lesson-text-interpolation.vue')
         },
+        {
+            path: '/lessons/dynamic_styling',
+            component: () => import('../views/lessons/lesson-dynamic-styling.vue')
+        },
 
         {
             path: '/exercices/text_interpolation',

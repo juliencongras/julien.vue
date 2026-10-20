@@ -16,6 +16,7 @@
                 <li><router-link to="/lessons/event_binding" class="btn btn-ghost">Event binding</router-link></li>
                 <li><router-link to="/lessons/attribute_binding" class="btn btn-ghost">Attribute binding</router-link></li>
                 <li><router-link to="/lessons/text_interpolation" class="btn btn-ghost">Text interpolation</router-link></li>
+                <li><router-link to="/lessons/dynamic_styling" class="btn btn-ghost">Dynamic styling</router-link></li>
               </ul>
             </details>
           </li>
