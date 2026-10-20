@@ -21,6 +21,13 @@ const router = createRouter({
             path: '/contact',
             component: () => import('../views/Contact.vue')
         },
+        // Route spéciale pour gérer les pages non trouvées
+        // Si la route sur laquelle on est ne Match pas nos autre routes (path)
+        // On redirige vers une page avec un template style page 404
+        {
+            path: '/:pathMatch(.*)*',
+            component: () => import('../views/not-found.vue'),
+        },
 
         {
             path: '/lessons/attribute_binding',
