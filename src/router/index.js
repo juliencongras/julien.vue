@@ -57,6 +57,10 @@ const router = createRouter({
             path: '/lessons/dynamic_styling',
             component: () => import('../views/lessons/lesson-dynamic-styling.vue')
         },
+        {
+            path: '/lessons/two_way_binding',
+            component: () => import('../views/lessons/lesson-two-way-binding.vue')
+        },
 
         {
             path: '/exercices/text_interpolation',
