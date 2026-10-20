@@ -29,6 +29,7 @@ const router = createRouter({
             component: () => import('../views/not-found.vue'),
         },
 
+        //Lessons
         {
             path: '/lessons/attribute_binding',
             component: () => import('../views/lessons/lesson-attribute-binding.vue')
@@ -61,7 +62,16 @@ const router = createRouter({
             path: '/lessons/two_way_binding',
             component: () => import('../views/lessons/lesson-two-way-binding.vue')
         },
+        {
+            path: '/lessons/conditional_rendering',
+            component: () => import('../views/lessons/lesson-conditional-rendering.vue')
+        },
+        {
+            path: '/lessons/list_rendering',
+            component: () => import('../views/lessons/lesson-list-rendering.vue')
+        },
 
+        //Exercices
         {
             path: '/exercices/text_interpolation',
             component: () => import('../views/exercices/exercice-text-interpolation.vue')
@@ -79,6 +89,7 @@ const router = createRouter({
             component: () => import('../views/exercices/exercice-dynamic-styling.vue')
         },
 
+        //Corrections
         {
             path: '/corrections/text_interpolation',
             component: () => import('../views/corrections/correction-text-interpolation.vue')
@@ -96,7 +107,7 @@ const router = createRouter({
             component: () => import('../views/corrections/correction-tp-data-binding.vue')
         },
 
-
+        //TP
         {
             path: '/tp/data_binding',
             component: () => import('../views/tp/tp-data-binding.vue')

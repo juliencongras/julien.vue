@@ -18,6 +18,8 @@
                 <li><router-link to="/lessons/text_interpolation" class="btn btn-ghost">Text interpolation</router-link></li>
                 <li><router-link to="/lessons/dynamic_styling" class="btn btn-ghost">Dynamic styling</router-link></li>
                 <li><router-link to="/lessons/two_way_binding" class="btn btn-ghost">Two way binding</router-link></li>
+                <li><router-link to="/lessons/conditional_rendering" class="btn btn-ghost">Conditional rendering</router-link></li>
+                <li><router-link to="/lessons/list_rendering" class="btn btn-ghost">List rendering</router-link></li>
               </ul>
             </details>
           </li>
