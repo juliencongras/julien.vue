@@ -28,7 +28,7 @@
         firstH2DisplayStatus.value = firstH2DisplayStatus.value == 'visible'?'hidden':'visible';
         console.log(chosenClass.value);
         console.log(inputClass.value);
-        //EST égale à maClasseCorld/hello (je vait péter les plombs)
+        //EST égale à maClasseWorld/hello (je vait péter les plombs)
         console.log('maClasse' + inputClass.value);
     }
 </script>
