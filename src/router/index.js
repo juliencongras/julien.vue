@@ -118,6 +118,10 @@ const router = createRouter({
             path: '/corrections/dynamic_styling',
             component: () => import('../views/corrections/exercice-dynamic-styling.vue')
         },
+        {
+            path: '/corrections/tp_dynamic_styling',
+            component: () => import('../views/corrections/tp-dynamic-styling.vue')
+        },
 
         //TP
         {
