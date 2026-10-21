@@ -100,6 +100,10 @@ const router = createRouter({
             path: '/exercices/list_rendering',
             component: () => import('../views/exercices/exercice-list-rendering.vue')
         },
+        {
+            path: '/exercices/computed_properties',
+            component: () => import('../views/exercices/exercice-computed-properties.vue')
+        },
 
         //Corrections
         {
