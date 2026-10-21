@@ -3,10 +3,12 @@
         <div class="card bg-base-100 shadow-xl rounded-box">
             <div class="card-body">
                 <h5 class="text-2xl font-bold text-center bg-primary text-primary-content">TP reactivité : Le numéro gagnant</h5>
-                <p>Le nombre : </p>
-                <p>{{ leNombre }}</p>
-                <p>{{ indice }}</p>
-                <p>{{ msg }}</p>
+                <div class="card-body bg-error">
+                    <p class="text-center">Le nombre : </p>
+                    <p class="text-2xl font-bold text-center text-primary">{{ leNombre }}</p>
+                </div>
+                <p class="ext-2xl font-bold text-center text-secondary">{{ indice }}</p>
+                <p class="text-center">{{ msg }}</p>
                 <div class="flex flex-col md:flex-row justify-center items-center my-6">
                     <button @click="augmenter(1)" type="button" class="btn btn-success">+1</button>
                     <button @click="augmenter(5)" type="button" class="btn btn-error">+5</button>
