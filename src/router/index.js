@@ -138,6 +138,10 @@ const router = createRouter({
             path: '/corrections/list_rendering',
             component: () => import('../views/corrections/correction-list-rendering.vue')
         },
+        {
+            path: '/corrections/computed_properties',
+            component: () => import('../views/corrections/correction-computed-properties.vue')
+        },
 
         //TP
         {
