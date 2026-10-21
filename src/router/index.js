@@ -163,6 +163,10 @@ const router = createRouter({
         {
             path: '/tp/dynamic_styling',
             component: () => import('../views/tp/tp-dynamic-styling.vue')
+        },
+        {
+            path: '/tp/reactivite',
+            component: () => import('../views/tp/tp-reactivite.vue')
         }
 
     ]
