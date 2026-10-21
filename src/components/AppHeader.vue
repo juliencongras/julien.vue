@@ -22,6 +22,7 @@
                 <li><router-link to="/lessons/list_rendering" class="btn btn-ghost">List rendering</router-link></li>
                 <li><router-link to="/lessons/computed_properties" class="btn btn-ghost">Computed properties</router-link></li>
                 <li><router-link to="/lessons/watchers" class="btn btn-ghost">Watchers</router-link></li>
+                <li><router-link to="/lessons/lifecycle" class="btn btn-ghost">Lifecycle</router-link></li>
               </ul>
             </details>
           </li>

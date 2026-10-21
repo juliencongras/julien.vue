@@ -78,6 +78,10 @@ const router = createRouter({
             path: '/lessons/watchers',
             component: () => import('../views/lessons/lesson-watchers.vue')
         },
+        {
+            path: '/lessons/lifecycle',
+            component: () => import('../views/lessons/lesson-lifecycle.vue')
+        },
 
         //Exercices
         {
