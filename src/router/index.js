@@ -108,6 +108,10 @@ const router = createRouter({
             path: '/exercices/computed_properties',
             component: () => import('../views/exercices/exercice-computed-properties.vue')
         },
+        {
+            path: '/exercices/watchers',
+            component: () => import('../views/exercices/exercice-watchers.vue')
+        },
 
         //Corrections
         {
