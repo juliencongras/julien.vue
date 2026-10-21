@@ -122,6 +122,10 @@ const router = createRouter({
             path: '/corrections/tp_dynamic_styling',
             component: () => import('../views/corrections/tp-dynamic-styling.vue')
         },
+        {
+            path: '/corrections/conditional_rendering',
+            component: () => import('../views/corrections/exercice-conditional-rendering.vue')
+        },
 
         //TP
         {
