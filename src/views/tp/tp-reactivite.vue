@@ -8,7 +8,7 @@
                     <p class="text-2xl font-bold text-center text-primary">{{ leNombre }}</p>
                 </div>
                 <p class="ext-2xl font-bold text-center text-secondary">{{ indice }}</p>
-                <p class="text-center">{{ msg }}</p>
+                <div class="badge badge-error" v-if="msg">{{ msg }}</div>
                 <div class="flex flex-col md:flex-row justify-center items-center my-6">
                     <button @click="augmenter(1)" type="button" class="btn btn-success">+1</button>
                     <button @click="augmenter(5)" type="button" class="btn btn-error">+5</button>
