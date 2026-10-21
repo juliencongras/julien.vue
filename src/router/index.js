@@ -114,6 +114,10 @@ const router = createRouter({
             path: '/corrections/tp_data_binding',
             component: () => import('../views/corrections/correction-tp-data-binding.vue')
         },
+        {
+            path: '/corrections/dynamic_styling',
+            component: () => import('../views/corrections/exercice-dynamic-styling.vue')
+        },
 
         //TP
         {
