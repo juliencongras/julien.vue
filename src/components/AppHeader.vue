@@ -57,6 +57,7 @@
                 <li><router-link to="/corrections/conditional_rendering" class="btn btn-ghost">Conditional rendering</router-link></li>
                 <li><router-link to="/corrections/list_rendering" class="btn btn-ghost">List rendering</router-link></li>
                 <li><router-link to="/corrections/computed_properties" class="btn btn-ghost">Computed properties</router-link></li>
+                <li><router-link to="/corrections/watcher" class="btn btn-ghost">Watcher</router-link></li>
               </ul>
             </details>
           </li>

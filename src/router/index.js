@@ -150,6 +150,10 @@ const router = createRouter({
             path: '/corrections/computed_properties',
             component: () => import('../views/corrections/correction-computed-properties.vue')
         },
+        {
+            path: '/corrections/watcher',
+            component: () => import('../views/corrections/correction-watcher.vue')
+        },
 
         //TP
         {
