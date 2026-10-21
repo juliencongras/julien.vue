@@ -154,6 +154,10 @@ const router = createRouter({
             path: '/corrections/watcher',
             component: () => import('../views/corrections/correction-watcher.vue')
         },
+        {
+            path: '/corrections/tp_reactivite',
+            component: () => import('../views/corrections/correction-tp-reactivite.vue')
+        },
 
         //TP
         {
