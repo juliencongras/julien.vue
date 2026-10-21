@@ -21,6 +21,7 @@
 
     const leNombre = ref(0);
     const msg = ref('');
+    let bigNumberTimeOut;
 
     const indice = computed(() => {
         if(leNombre.value < 7){
@@ -37,13 +38,13 @@
     watch(leNombre, (newVal)=> {
         console.log("ça surveille");
         if(newVal > 30){
+            clearTimeout(bigNumberTimeOut);
             console.log("Limite ateinte !");
             msg.value = "Nombre beaucoup trop haut, réinitialisation...";
-            const bigNumberTimeOut = setTimeout(() => {
+            bigNumberTimeOut = setTimeout(() => {
                 leNombre.value = 0;
                 msg.value = "";
             }, 5000);
-            clearTimeout(bigNumberTimeOut);
         }
     });
 
