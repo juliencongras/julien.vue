@@ -9,7 +9,7 @@
           <li>
             <details>
               <summary>Leçons</summary>
-              <ul class="bg-base-100 rounded-t-none p-2">
+              <ul class="bg-base-100 rounded-t-none p-2 overflow-y-auto max-h-60">
                 <li><router-link to="/lessons/introduction" class="btn btn-ghost">Introduction</router-link></li>
                 <li><router-link to="/lessons/setup" class="btn btn-ghost">Setup</router-link></li>
                 <li><router-link to="/lessons/syntax" class="btn btn-ghost">Syntax</router-link></li>
@@ -30,7 +30,7 @@
           <li>
             <details>
               <summary>Exercices</summary>
-              <ul class="bg-base-100 rounded-t-none p-2">
+              <ul class="bg-base-100 rounded-t-none p-2 overflow-y-auto max-h-60">
                 <li><router-link to="/exercices/text_interpolation" class="btn btn-ghost">Text interpolation</router-link></li>
                 <li><router-link to="/exercices/attribute_binding" class="btn btn-ghost">Attribute binding</router-link></li>
                 <li><router-link to="/exercices/event_binding" class="btn btn-ghost">Event binding</router-link></li>
@@ -47,7 +47,7 @@
           <li>
             <details>
               <summary>Corrections</summary>
-              <ul class="bg-base-100 rounded-t-none p-2">
+              <ul class="bg-base-100 rounded-t-none p-2 overflow-y-auto max-h-60">
                 <li><router-link to="/corrections/text_interpolation" class="btn btn-ghost">Text interpolation</router-link></li>
                 <li><router-link to="/corrections/attribute_binding" class="btn btn-ghost">Attribute binding</router-link></li>
                 <li><router-link to="/corrections/event_binding" class="btn btn-ghost">Event binding</router-link></li>
@@ -65,7 +65,7 @@
           <li>
             <details>
               <summary>TP</summary>
-              <ul class="bg-base-100 rounded-t-none p-2">
+              <ul class="bg-base-100 rounded-t-none p-2 overflow-y-auto max-h-60">
                 <li><router-link to="/tp/data_binding" class="btn btn-ghost">Data binding</router-link></li>
                 <li><router-link to="/tp/dynamic_styling" class="btn btn-ghost">Dynamic styling</router-link></li>
               </ul>
