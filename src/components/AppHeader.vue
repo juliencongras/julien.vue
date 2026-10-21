@@ -20,6 +20,7 @@
                 <li><router-link to="/lessons/two_way_binding" class="btn btn-ghost">Two way binding</router-link></li>
                 <li><router-link to="/lessons/conditional_rendering" class="btn btn-ghost">Conditional rendering</router-link></li>
                 <li><router-link to="/lessons/list_rendering" class="btn btn-ghost">List rendering</router-link></li>
+                <li><router-link to="/lessons/computed_properties" class="btn btn-ghost">Computed properties</router-link></li>
               </ul>
             </details>
           </li>
