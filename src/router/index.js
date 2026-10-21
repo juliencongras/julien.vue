@@ -126,6 +126,10 @@ const router = createRouter({
             path: '/corrections/conditional_rendering',
             component: () => import('../views/corrections/exercice-conditional-rendering.vue')
         },
+        {
+            path: '/corrections/list_rendering',
+            component: () => import('../views/corrections/correction-list-rendering.vue')
+        },
 
         //TP
         {

@@ -51,6 +51,7 @@
                 <li><router-link to="/corrections/dynamic_styling" class="btn btn-ghost">Dynamic styling</router-link></li>
                 <li><router-link to="/corrections/tp_dynamic_styling" class="btn btn-ghost">TP dynamic styling</router-link></li>
                 <li><router-link to="/corrections/conditional_rendering" class="btn btn-ghost">Conditional rendering</router-link></li>
+                <li><router-link to="/corrections/list_rendering" class="btn btn-ghost">List rendering</router-link></li>
               </ul>
             </details>
           </li>
