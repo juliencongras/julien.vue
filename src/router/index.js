@@ -74,6 +74,10 @@ const router = createRouter({
             path: '/lessons/computed_properties',
             component: () => import('../views/lessons/lesson-computed-properties.vue')
         },
+        {
+            path: '/lessons/watchers',
+            component: () => import('../views/lessons/lesson-watchers.vue')
+        },
 
         //Exercices
         {
