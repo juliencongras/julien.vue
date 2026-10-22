@@ -3,12 +3,16 @@
         <div class="card w-full max-w-3xl bg-base-100 shadow-xl p-6">
             <h1 class="text-3xl font-bold text-primary mb-6 text-center">TP : Jeu tour par tour</h1>
             <div v-if="!winner">
-                <p>{{ fetchedPokemon[0].name }}</p>
-                <progress class="progress progress-success w-56" :value="vieAdversaire" max="100"></progress>
-                <img class="w-50" :src="fetchedPokemon[0].sprites.front_default" :alt="fetchedPokemon[0].name">
-                <p>{{ fetchedPokemon[1].name }}</p>
-                <progress class="progress progress-success w-56" :value="viePlayer" max="100"></progress>
-                <img class="w-50" :src="fetchedPokemon[1].sprites.front_default" :alt="fetchedPokemon[1].name">
+                <div class="flex flex-col items-end">
+                    <p>{{ fetchedPokemon[0].name }}</p>
+                    <progress class="progress progress-success w-56" :value="vieAdversaire" max="100"></progress>
+                    <img class="w-50" :src="fetchedPokemon[0].sprites.front_default" :alt="fetchedPokemon[0].name">
+                </div>
+                <div>
+                    <p>{{ fetchedPokemon[1].name }}</p>
+                    <progress class="progress progress-success w-56" :value="viePlayer" max="100"></progress>
+                    <img class="w-50" :src="fetchedPokemon[1].sprites.back_default" :alt="fetchedPokemon[1].name">
+                </div>
 
                 <button class="btn btn-accent" @click="attackAdversaire()">Attaque</button>
                 <button class="btn btn-info" @click="specialAttackAdversaire()" :disabled="playerSpecialAttackCooldown > 0">
