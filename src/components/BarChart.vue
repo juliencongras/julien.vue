@@ -19,11 +19,14 @@ export default {
     return {
       chartData: {
         labels: [ 'Janvier', 'Février', 'Mars', 'Avril', 'Mai' ],
-        datasets: [ { data: [1200, 1400, 800, 2000, 1800] } ]
+        datasets: [ { data: [1200, 1400, 800, 2000, 1800], 
+          label: "Ventes (€)",
+          backgroundColor: 'blue'
+        } ]
       },
       chartOptions: {
         responsive: true
-      }
+      } 
     }
   }
 }
