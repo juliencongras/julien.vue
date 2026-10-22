@@ -189,6 +189,11 @@ const router = createRouter({
             path: '/tp/conditional_list_rendering',
             component: () => import('../views/tp/tp-conditional-list-rendering.vue')
         }
+        ,
+        {
+            path: '/tp/jeu_tour_par_tour',
+            component: () => import('../views/tp/tp-jeu-tour-par-tour.vue')
+        }
 
     ]
 })
