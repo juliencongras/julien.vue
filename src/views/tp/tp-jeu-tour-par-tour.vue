@@ -54,7 +54,7 @@
     function attackAdversaire(){
         const playerAttackRandomAdjustment = playerBaseAttackValue.value + Math.floor(Math.random() * 5);
         vieAdversaire.value -= playerAttackRandomAdjustment;
-        battleLog.value.push(`Player Ataque : ${playerAttackRandomAdjustment} pts`);
+        battleLog.value.push(`Player Ataque : -${playerAttackRandomAdjustment} pts`);
         attackPlayer();
         currentRound.value ++;
     }
