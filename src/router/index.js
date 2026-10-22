@@ -120,6 +120,10 @@ const router = createRouter({
             path: '/exercices/lifecycle_api',
             component: () => import('../views/exercices/exercice-lifecycle-api.vue')
         },
+        {
+            path: '/exercices/charte_js_dynamique',
+            component: () => import('../views/exercices/exercice-charte-js-dynamique.vue')
+        },
 
         //Corrections
         {
