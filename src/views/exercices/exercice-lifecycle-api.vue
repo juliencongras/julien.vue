@@ -8,7 +8,7 @@
             </ul>
 
             <div class="divider my-6"></div>
-        <!--
+        
             <h2 class="text-xl font-semibold text-secondary mb-4">Météo Toulouse :</h2>
             <div class="bg-base-100 p-4 rounded shadow">
                 <p>Température max : {{ fetchedMeteo.daily.temperature_2m_max[0] }}</p>
@@ -17,15 +17,18 @@
                 <p>Température min : {{ fetchedMeteo.daily.temperature_2m_min[0] }}</p>
             </div>
             <div class="bg-base-100 p-4 rounded shadow">
-                <p>Température actuelle : </p>
+                <p>Température actuelle : {{ fetchedMeteo.current.temperature_2m }}</p>
             </div>
             <div class="bg-base-100 p-4 rounded shadow">
                 <p>Condition météo : ¯\_(ツ)_/¯</p>
             </div>
-        
-        <h2 class="text-xl font-semibold text-secondary mb-4">Carte Yu-Gi-Oh aléatoire :</h2>
-        <img :alt="fetchedYugioh.name" :src="fetchedYugioh.card_images[0].image_url">
-        -->
+
+            <div class="divider my-6"></div>
+
+            <h2 class="text-xl font-semibold text-secondary mb-4">Carte Yu-Gi-Oh aléatoire :</h2>
+            <h2 class="text-xl font-semibold text-secondary mb-4 text-center">{{ fetchedYugioh.name }}</h2>
+            <img :alt="fetchedYugioh.name" :src="fetchedYugioh.card_images[0].image_url">
+
         </div>
     </div>
 </template>
@@ -34,8 +37,8 @@
     import { ref, onMounted } from 'vue';
 
     const fetchedPokemon = ref([]);
-    const fetchedMeteo = ref();
-    const fetchedYugioh = ref();
+    const fetchedMeteo = ref({daily: {temperature_2m_max: [], temperature_2m_min: []}, current: {temperature_2m: 0}});
+    const fetchedYugioh = ref({name: "Loading card...", card_images: [{image_url: ""}]});
 
     const pokemonFetch = async () => {
         try {
@@ -53,8 +56,6 @@
         }
     };
 
-    //This API just refuses to work correctly on page load but if I change something and save this file while being on this page it works.
-    //I've commented the output out for now
     const meteoFetch = async () => {
         try {
             const linkApi = await fetch("https://api.open-meteo.com/v1/forecast?latitude=43.6043&longitude=1.4437&daily=temperature_2m_max,temperature_2m_min&current=temperature_2m,apparent_temperature&hourly=");
@@ -74,7 +75,6 @@
         }
     };
 
-    // THE SAME NONSENSE IS HAPPENING HERE I DON'T KNOW WHAT I'M DOING WRONG I'M CRASHING OUT
     const yugiohFetch = async () => {
         try {
             const linkApi = await fetch("https://db.ygoprodeck.com/api/v7/cardinfo.php");
