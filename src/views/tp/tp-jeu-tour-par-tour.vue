@@ -23,7 +23,7 @@
 </template>
 
 <script setup>
-    import { ref, onMounted } from 'vue';
+    import { ref, watch, onMounted } from 'vue';
 
     const viePlayer = ref(100);
     const vieAdversaire = ref(100);
@@ -71,8 +71,32 @@
     }
 
     function abandonner(){
-
+        winner.value = "PERDU";
     }
+
+    watch(viePlayer, (newVal) => {
+        if(newVal <= 0){
+            if(vieAdversaire.value <= 0){
+                winner.value = "égalité";
+            }
+            else{
+                winner.value = "PERDU";
+            }
+        }
+    });
+    watch(vieAdversaire, (newVal) => {
+        if(newVal <= 0){
+            if(viePlayer.value <= 0){
+                winner.value = "égalité";
+            }
+            else{
+                winner.value = "VICTOIRE";
+            }
+        }
+    });
+    watch(winner, (newVal) => {
+        console.log(newVal);
+    });
 
     const pokemonFetch = async () => {
         try {
