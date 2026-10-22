@@ -2,8 +2,17 @@
     <div class="flex justify-center my-8">
         <div class="card w-full max-w-3xl bg-base-100 shadow-xl p-6">
             <h1 class="text-3xl font-bold text-primary mb-6 text-center">TP : Jeu tour par tour</h1>
-            <img src="" alt="">
-            <img src="" alt="">
+            <p>{{ fetchedPokemon[0].name }}</p>
+            <progress class="progress progress-success w-56" :value="vieAdversaire" max="100"></progress>
+            <img class="w-50" :src="fetchedPokemon[0].sprites.front_default" :alt="fetchedPokemon[0].name">
+            <p>{{ fetchedPokemon[1].name }}</p>
+            <progress class="progress progress-success w-56" :value="viePlayer" max="100"></progress>
+            <img class="w-50" :src="fetchedPokemon[1].sprites.front_default" :alt="fetchedPokemon[1].name">
+
+            <button class="btn btn-accent" @click="attackAdversaire()">Attaque</button>
+            <button class="btn btn-info" @click="specialAttackAdversaire()">Attaque spéciale</button>
+            <button class="btn btn-success" @click="soinPlayer()">Soin</button>
+            <button class="btn btn-error" @click="abandonner()">Abandonner</button>
         </div>
     </div>
 </template>
@@ -22,10 +31,10 @@
     const playerHealingValue = ref(30);
     const adversaireBaseAttaclValue = ref(15);
 
-    const fetchedPokemon = ref([1,2]);
+    const fetchedPokemon = ref([{name: "", sprites: {front_default: ""}},{name: "", sprites: {front_default: ""}}]);
     
     function attackAdversaire(){
-        const playerAttackRandomAdjustment = playerBaseAttackValue + Math.floor(Math.random() * 5);
+        const playerAttackRandomAdjustment = playerBaseAttackValue.value + Math.floor(Math.random() * 5);
         vieAdversaire.value -= playerAttackRandomAdjustment;
         battleLog.value.push(`Player Ataque : ${playerAttackRandomAdjustment} pts`);
         attackPlayer();
@@ -33,7 +42,7 @@
     }
 
     function specialAttackAdversaire(){
-        const playerSpecialAttackRandomAdjustment = playerSpecialAttackValue + Math.floor(Math.random() * 5);
+        const playerSpecialAttackRandomAdjustment = playerSpecialAttackValue.value + Math.floor(Math.random() * 5);
         vieAdversaire.value -= playerSpecialAttackRandomAdjustment;
         battleLog.value.push(`Player lance une Attaque Spécial ! : -${playerSpecialAttackRandomAdjustment} pts`)
         attackPlayer();
@@ -41,17 +50,17 @@
     }
 
     function attackPlayer(){
-        const adversaireAttackRandomAdjustment = adversaireBaseAttaclValue + Math.floor(Math.random() * 5);
+        const adversaireAttackRandomAdjustment = adversaireBaseAttaclValue.value + Math.floor(Math.random() * 5);
         viePlayer.value -= adversaireAttackRandomAdjustment;
         battleLog.value.push(`Monstre Ataque : -${adversaireAttackRandomAdjustment} pts`)
     }
 
     function soinPlayer(){
-        viePlayer.value += playerHealingValue;
+        viePlayer.value += playerHealingValue.value;
         if(viePlayer.value > 100){
             viePlayer.value = 100;
         }
-        battleLog.value.push(`Player se soigne : ${playerHealingValue} pts`);
+        battleLog.value.push(`Player se soigne : ${playerHealingValue.value} pts`);
         attackPlayer();
         currentRound.value ++;
     }
