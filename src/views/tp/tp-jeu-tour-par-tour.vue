@@ -13,6 +13,11 @@
             <button class="btn btn-info" @click="specialAttackAdversaire()">Attaque spéciale</button>
             <button class="btn btn-success" @click="soinPlayer()">Soin</button>
             <button class="btn btn-error" @click="abandonner()">Abandonner</button>
+
+            <p class="text-center">Battle log :</p>
+            <li class="overflow-y-auto max-h-60">
+                <ul v-for="(action, index) in battleLog":key="index">{{ action }}</ul>
+            </li>
         </div>
     </div>
 </template>
@@ -44,7 +49,7 @@
     function specialAttackAdversaire(){
         const playerSpecialAttackRandomAdjustment = playerSpecialAttackValue.value + Math.floor(Math.random() * 5);
         vieAdversaire.value -= playerSpecialAttackRandomAdjustment;
-        battleLog.value.push(`Player lance une Attaque Spécial ! : -${playerSpecialAttackRandomAdjustment} pts`)
+        battleLog.value.push(`Player lance une Attaque Spéciale ! : -${playerSpecialAttackRandomAdjustment} pts`)
         attackPlayer();
         currentRound.value ++;
     }
