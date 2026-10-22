@@ -116,6 +116,10 @@ const router = createRouter({
             path: '/exercices/watchers',
             component: () => import('../views/exercices/exercice-watchers.vue')
         },
+        {
+            path: '/exercices/lifecycle_api',
+            component: () => import('../views/exercices/exercice-lifecycle-api.vue')
+        },
 
         //Corrections
         {

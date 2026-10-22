@@ -40,6 +40,7 @@
                 <li><router-link to="/exercices/list_rendering" class="btn btn-ghost">List rendering</router-link></li>
                 <li><router-link to="/exercices/computed_properties" class="btn btn-ghost">Computed properties</router-link></li>
                 <li><router-link to="/exercices/watchers" class="btn btn-ghost">Watchers</router-link></li>
+                <li><router-link to="/exercices/lifecycle_api" class="btn btn-ghost">Lifecycle api</router-link></li>
               </ul>
             </details>
           </li>
