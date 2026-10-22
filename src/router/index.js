@@ -180,6 +180,11 @@ const router = createRouter({
             path: '/tp/reactivite',
             component: () => import('../views/tp/tp-reactivite.vue')
         }
+        ,
+        {
+            path: '/tp/conditional_list_rendering',
+            component: () => import('../views/tp/tp-conditional-list-rendering.vue')
+        }
 
     ]
 })
