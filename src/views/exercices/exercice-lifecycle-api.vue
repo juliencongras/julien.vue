@@ -28,6 +28,7 @@
             <h2 class="text-xl font-semibold text-secondary mb-4">Carte Yu-Gi-Oh aléatoire :</h2>
             <h2 class="text-xl font-semibold text-secondary mb-4 text-center">{{ fetchedYugioh.name }}</h2>
             <img :alt="fetchedYugioh.name" :src="fetchedYugioh.card_images[0].image_url">
+            <button class="btn btn-neutral" @click="yugiohFetch">Piocher une carte aléatoire</button>
 
         </div>
     </div>
