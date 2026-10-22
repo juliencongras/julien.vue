@@ -11,7 +11,9 @@
                 <img class="w-50" :src="fetchedPokemon[1].sprites.front_default" :alt="fetchedPokemon[1].name">
 
                 <button class="btn btn-accent" @click="attackAdversaire()">Attaque</button>
-                <button class="btn btn-info" @click="specialAttackAdversaire()">Attaque spéciale</button>
+                <button class="btn btn-info" @click="specialAttackAdversaire()" :disabled="playerSpecialAttackCooldown > 0">
+                    Attaque spéciale
+                </button>
                 <button class="btn btn-success" @click="soinPlayer()">Soin</button>
                 <button class="btn btn-error" @click="abandonner()">Abandonner</button>
             </div>
@@ -41,6 +43,7 @@
     const playerSpecialAttackValue = ref(30);
     const playerHealingValue = ref(30);
     const adversaireBaseAttaclValue = ref(15);
+    const playerSpecialAttackCooldown = ref(0);
 
     const fetchedPokemon = ref([{name: "", sprites: {front_default: ""}},{name: "", sprites: {front_default: ""}}]);
     
@@ -56,6 +59,7 @@
         const playerSpecialAttackRandomAdjustment = playerSpecialAttackValue.value + Math.floor(Math.random() * 5);
         vieAdversaire.value -= playerSpecialAttackRandomAdjustment;
         battleLog.value.push(`Player lance une Attaque Spéciale ! : -${playerSpecialAttackRandomAdjustment} pts`)
+        playerSpecialAttackCooldown.value = 3;
         attackPlayer();
         currentRound.value ++;
     }
@@ -84,6 +88,7 @@
         pokemonFetch();
         viePlayer.value = 100;
         vieAdversaire.value = 100;
+        playerSpecialAttackCooldown.value = 0;
         battleLog.value = [];
         winner.value = false;
     }
@@ -108,8 +113,10 @@
             }
         }
     });
-    watch(winner, (newVal) => {
-        console.log(newVal);
+    watch(currentRound, (newVal) => {
+        if(playerSpecialAttackCooldown.value > 0){
+            playerSpecialAttackCooldown.value -= 1;
+        }
     });
 
     const pokemonFetch = async () => {
