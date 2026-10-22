@@ -1,11 +1,35 @@
 <template>
-    API
+    <div class="flex justify-center my-8">
+        <div class="card w-full max-w-3xl bg-base-200 shadow-xl p-6">
+            <h1 class="text-3xl font-bold text-primary mb-6 text-center">Une simple requête HTTP Get</h1>
+            <h2 class="text-xl font-semibold text-secondary mb-4">Les Pokémon :</h2>
+            <ul>
+                <li class="badge badge-primary" v-for="(onePokemon, index) in fetchedPokemon":key="index">{{ onePokemon.name }}</li>
+            </ul>
+
+            <div class="divider my-6"></div>
+
+            <h2 class="text-xl font-semibold text-secondary mb-4">Météo Toulouse :</h2>
+        </div>
+    </div>
 </template>
 
 <script setup>
     import { ref, onMounted } from 'vue';
 
+    const fetchedPokemon = ref([]);
+
+    const pokemonFetch = async () => {
+        try {
+            const linkApi = await fetch("https://pokeapi.co/api/v2/pokemon");
+            const apiData = await linkApi.json();
+            fetchedPokemon.value = apiData.results;
+        } catch (error) {
+            console.log("An error has occured: ", error);
+        }
+    };
+
     onMounted(() => {
-        console.log('✅ Le composant est monté : on peut faire des appels API.')
-    })
+        pokemonFetch();
+    });
 </script>
