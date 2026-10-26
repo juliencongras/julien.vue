@@ -62,6 +62,7 @@
                 <li><router-link to="/corrections/computed_properties" class="btn btn-ghost">Computed properties</router-link></li>
                 <li><router-link to="/corrections/watcher" class="btn btn-ghost">Watcher</router-link></li>
                 <li><router-link to="/corrections/tp_reactivite" class="btn btn-ghost">TP Reactivité</router-link></li>
+                <li><router-link to="/corrections/lifecycle_api" class="btn btn-ghost">Lifecycle API</router-link></li>
               </ul>
             </details>
           </li>

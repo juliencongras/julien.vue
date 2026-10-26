@@ -170,6 +170,10 @@ const router = createRouter({
             path: '/corrections/tp_reactivite',
             component: () => import('../views/corrections/correction-tp-reactivite.vue')
         },
+        {
+            path: '/corrections/lifecycle_api',
+            component: () => import('../views/corrections/correction-lifecycle-api.vue')
+        },
 
         //TP
         {
