@@ -16,14 +16,21 @@
     </div>
 
     <div class="divider my-6"></div>
+
+    <h2 class="text-xl font-semibold text-secondary mb-4">Digimons :</h2>
+    <OneDigimon v-for="(oneDigimon, index) in digimonArray" :key="index"
+            v-bind:digimonName="oneDigimon.name"
+            :digimonImage="oneDigimon.image" />
 </template>
 
 <script setup lang='js'>
 import OneFriend from '../../components/OneFriend.vue';
 import OnePokemonName from '../../components/OnePokemonName.vue';
+import OneDigimon from '../../components/OneDigimon.vue';
 import { ref, onMounted } from 'vue';
 
 const pokeArray = ref([]);
+const digimonArray = ref([]);
 
 const dataFromParent = [
     {
@@ -89,7 +96,20 @@ const fetchPokemon = async () => {
     }
 }
 
+const fetchDigimon = async () => {
+    try {
+        const response = await fetch('https://digi-api.com/api/v1/digimon')
+        const data = await response.json();
+        console.log("data digimon :",data);
+        console.log("data digimon content:",data.content);
+        digimonArray.value = data.content;
+    } catch (error) {
+        console.error('Erreur lors de la récupération des Pokémon :', error)
+    }
+}
+
 onMounted(() => {
-    fetchPokemon()
+    fetchPokemon();
+    fetchDigimon();
 })
 </script>
