@@ -25,12 +25,12 @@
                 dans un composant enfant :</p>
             <div class="flex flex-col lg:flex-row gap-4 justify-center">
                 <div class="w-full lg:w-1/2">
-                    <MessageCard title="Super MSG Important" content="Ceci est un message important pour l'utilisateur. on test des props"
-                        type="important" />
+                    <MessageCard msgTitle="Super MSG Important" msgContent="Ceci est un message important pour l'utilisateur. on test des props"
+                        msgType="important" />
                 </div>
                 <div class="w-full lg:w-1/2">
-                    <MessageCard title="eoeoeo" content="Vous avez une nouvelle notification."
-                         />
+                    <MessageCard msgTitle="eoeoeo" msgContent="Vous avez une nouvelle notification."
+                        msgType="notification" />
                 </div>
             </div>
         </section>

@@ -1,12 +1,12 @@
 <template>
     <div class="card w-full max-w-lg shadow-xl" 
-    :class="{'card-bordered border-error bg-error/10': type === 'important',
-            'card-bordered border-info bg-info/10': type === 'notification'}">
+    :class="{'card-bordered border-error bg-error/10': msgType === 'important',
+            'card-bordered border-info bg-info/10': msgType === 'notification'}">
         <div class="card-body">
-            <h5 class="card-title text-base-content">{{ title }}</h5>
-            <p class="text-base-content opacity-80">{{ content }}</p>
+            <h5 class="card-title text-base-content">{{ msgTitle }}</h5>
+            <p class="text-base-content opacity-80">{{ msgContent }}</p>
             <div class="mt-4">
-                <div v-if="type === 'important'" class="alert alert-error">
+                <div v-if="msgType === 'important'" class="alert alert-error">
                     <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none"
                         viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -14,7 +14,7 @@
                     </svg>
                     <span class="text-white">⚠️ Ce message est marqué comme important.</span>
                 </div>
-                <div v-else-if="type === 'notification'" class="alert alert-info">
+                <div v-else-if="msgType === 'notification'" class="alert alert-info">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                         class="stroke-current shrink-0 w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -28,26 +28,26 @@
 </template>
 
 <script setup lang='js'>
-// import { defineProps } from 'vue'
-// Déclaration en mode tableau (flemme)
-// const props = defineProps(['title', 'content', 'type']);
+import { defineProps } from 'vue'
+// Déclaration en mode tableau manière simple (flemme)
+const props = defineProps(['msgTitle', 'msgContent', 'msgType']);
 
-const props = defineProps({
-    title: {
-        type: String,
-        required: true,
-        // default:'base title',
-        validator: (value) => value == 'toto'
-    },
-    content: {
-        type: String,
-        required: true
-    },
-    type: {
-        type: String,
-        default: "notification"
-    }
-});
+// const props = defineProps({
+//     msgTitle: {
+//         type: String,
+//         required: true,
+//         // default:'base title',
+//         validator: (value) => value == 'toto'
+//     },
+//     msgContent: {
+//         type: String,
+//         required: true
+//     },
+//     msgType: {
+//         type: String,
+//         default: "notification"
+//     }
+// });
 </script>
 
 <style scoped lang="css">
