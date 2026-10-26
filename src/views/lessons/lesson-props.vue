@@ -24,13 +24,29 @@
             <p class="text-base-content opacity-80 mb-4 text-center">Voici un exemple simple d'utilisation des props
                 dans un composant enfant :</p>
             <div class="flex flex-col lg:flex-row gap-4 justify-center">
-                <div class="w-full lg:w-1/2">
-                    <MessageCard msgTitle="Super MSG Important" msgContent="Ceci est un message important pour l'utilisateur. on test des props"
-                        msgType="important" />
+                <!-- <div class="w-full lg:w-1/2">
+                    <MessageCard 
+                    msgTitle="Super MSG Important" 
+                    msgContent="Ceci est un message important pour l'utilisateur. on test des props"
+                    msgType="important" />
                 </div>
                 <div class="w-full lg:w-1/2">
-                    <MessageCard msgTitle="eoeoeo" msgContent="Vous avez une nouvelle notification."
-                        msgType="notification" />
+                    <MessageCard 
+                    msgTitle="Message Moins important" 
+                    msgContent="Vous avez une nouvelle notification."
+                    msgType="notification" />
+                </div>
+                <div class="w-full lg:w-1/2">
+                    <MessageCard 
+                    msgTitle="3ème Message" 
+                    msgContent="azertyuiop"
+                    msgType="notification" />
+                </div> -->
+                <div class="w-full lg:w-1/2">
+                    <MessageCard v-for="(oneData, index) in dataFromParent" :key="index"
+                    v-bind:msgTitle="oneData.msgTitle" 
+                    v-bind:msgContent="oneData.msgContent"
+                    v-bind:msgType="oneData.msgType" />
                 </div>
             </div>
         </section>
@@ -50,6 +66,29 @@
 
 <script setup lang='js'>
 import MessageCard from '../../components/MessageCard.vue';
+
+const dataFromParent = [
+    {
+        msgTitle: "Super MSG Important",
+        msgContent: "Ceci est un message important pour l'utilisateur.",
+        msgType: "important"
+    },
+    {
+        msgTitle: "Message Moins important",
+        msgContent: "Vous avez une nouvelle notification.",
+        msgType: "notification"
+    },
+    {
+        msgTitle: "3ème Message",
+        msgContent: "azertyuiop",
+        msgType: "notification"
+    },
+    {
+        msgTitle: "4ème Message",
+        msgContent: "Ceci est un autre message important.",
+        msgType: "important"
+    }
+];
 </script>
 
 <style scoped lang="css">
