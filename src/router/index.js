@@ -199,16 +199,18 @@ const router = createRouter({
         {
             path: '/tp/reactivite',
             component: () => import('../views/tp/tp-reactivite.vue')
-        }
-        ,
+        },
         {
             path: '/tp/conditional_list_rendering',
             component: () => import('../views/tp/tp-conditional-list-rendering.vue')
-        }
-        ,
+        },
         {
             path: '/tp/jeu_tour_par_tour',
             component: () => import('../views/tp/tp-jeu-tour-par-tour.vue')
+        },
+        {
+            path: '/tp/router_and_props',
+            component: () => import('../views/tp/tp-router-and-props.vue')
         }
 
     ]

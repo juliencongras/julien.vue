@@ -80,6 +80,7 @@
                 <li><router-link to="/tp/reactivite" class="btn btn-ghost">Reactivité</router-link></li>
                 <li><router-link to="/tp/conditional_list_rendering" class="btn btn-ghost">Conditional Rendering/List Rendering</router-link></li>
                 <li><router-link to="/tp/jeu_tour_par_tour" class="btn btn-ghost">Jeu tour par tour</router-link></li>
+                <li><router-link to="/tp/router_and_props" class="btn btn-ghost">Router and props</router-link></li>
               </ul>
             </details>
           </li>
