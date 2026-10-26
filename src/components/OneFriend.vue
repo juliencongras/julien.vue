@@ -6,7 +6,7 @@
             <div class="badge"
             :class="{'badge-outline badge-primary': propsToDataPremiumType === 'Standard',
             'badge-success': propsToDataPremiumType === 'Premium'}">
-                {{ friendPremium }}
+                {{ propsToDataPremiumType }}
             </div>
             <p class="text-base-content opacity-80">{{ friendID }}</p>
             <p class="text-base-content opacity-80">{{ friendPhone }}</p>
