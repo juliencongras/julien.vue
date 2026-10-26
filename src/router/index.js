@@ -132,6 +132,10 @@ const router = createRouter({
             path: '/exercices/charte_js_dynamique',
             component: () => import('../views/exercices/exercice-charte-js-dynamique.vue')
         },
+        {
+            path: '/exercices/props',
+            component: () => import('../views/exercices/exercice-props.vue')
+        },
 
         //Corrections
         {
