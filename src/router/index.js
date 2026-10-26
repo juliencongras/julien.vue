@@ -83,6 +83,10 @@ const router = createRouter({
             component: () => import('../views/lessons/lesson-lifecycle.vue')
         },
         {
+            path: '/lessons/lib_chartjs',
+            component: () => import('../views/lessons/lesson-lib-chartjs.vue')
+        },
+        {
             path: '/lessons/props',
             component: () => import('../views/lessons/lesson-props.vue')
         },

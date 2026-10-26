@@ -23,6 +23,7 @@
                 <li><router-link to="/lessons/computed_properties" class="btn btn-ghost">Computed properties</router-link></li>
                 <li><router-link to="/lessons/watchers" class="btn btn-ghost">Watchers</router-link></li>
                 <li><router-link to="/lessons/lifecycle" class="btn btn-ghost">Lifecycle</router-link></li>
+                <li><router-link to="/lessons/lib_chartjs" class="btn btn-ghost">Lib Chartjs</router-link></li>
                 <li><router-link to="/lessons/props" class="btn btn-ghost">Props</router-link></li>
               </ul>
             </details>
