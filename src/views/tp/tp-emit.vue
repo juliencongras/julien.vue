@@ -85,7 +85,7 @@ function updatePremium(friendID){
     for (const data in dataFromParent.value) {
         if(dataFromParent.value[data].friendID == friendID){
             console.log(dataFromParent.value[data].friendID);
-            dataFromParent.value[data].friendPremium = true;
+            dataFromParent.value[data].friendPremium = !dataFromParent.value[data].friendPremium;
             console.log("Premium check : ", dataFromParent.value[data].friendPremium);
             return;
         }
