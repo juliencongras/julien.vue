@@ -3,9 +3,9 @@
         <h4 class="mx-3 card-title text-xl font-bold mb-4">Composant OneFriend.vue</h4>
         <div class="card-body">
             <h2 class="card-title text-primary">
-                👤 {{ unAmiName }} - un ami : {{ premiumData ? 'en Or' : 'En Plomb' }}
-                <div class="badge" :class="premiumData ? 'badge-success' : 'badge-ghost'">
-                    {{ premiumData ? 'Premium' : 'Standard' }}
+                👤 {{ unAmiName }} - un ami : {{ unAmiPremium ? 'en Or' : 'En Plomb' }}
+                <div class="badge" :class="unAmiPremium ? 'badge-success' : 'badge-ghost'">
+                    {{ unAmiPremium ? 'Premium' : 'Standard' }}
                 </div>
             </h2>
 

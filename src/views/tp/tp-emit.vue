@@ -71,10 +71,8 @@ function deleteFriend(friendID){
     console.log(dataFromParent.value);
     
     for (const data in dataFromParent.value) {
-        console.log(dataFromParent.value[data].friendID);
-        
         if(dataFromParent.value[data].friendID == friendID){
-            
+            console.log(dataFromParent.value[data].friendID);
             dataFromParent.value.splice(data, 1);
             return;
         }
@@ -85,10 +83,8 @@ function updatePremium(friendID){
     console.log("Id de l'ami à passer en premium : ", friendID);
     
     for (const data in dataFromParent.value) {
-        console.log(dataFromParent.value[data].friendID);
-        
         if(dataFromParent.value[data].friendID == friendID){
-            
+            console.log(dataFromParent.value[data].friendID);
             dataFromParent.value[data].friendPremium = true;
             console.log("Premium check : ", dataFromParent.value[data].friendPremium);
             return;
@@ -100,7 +96,7 @@ function addFriend(emitedName, emitedTel, emitedEmail){
     console.log(emitedName, emitedTel, emitedEmail);
     if(emitedName && emitedTel && emitedEmail){
         dataFromParent.value.push({
-            friendID: dataFromParent.value.length,
+            friendID: Math.random(),
             friendName: emitedName,
             friendPhone: emitedTel,
             friendEmail: emitedEmail,
