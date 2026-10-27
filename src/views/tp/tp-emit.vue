@@ -1,5 +1,6 @@
 <template>
-    <OneFriend v-for="(oneData, index) in dataFromParent" :key="index"
+    <OneFriend v-on:delete-friend="deleteFriend" v-on:mon-event-premium-update="updatePremium"
+    v-for="(oneData, index) in dataFromParent" :key="index"
                     v-bind:unAmiId="oneData.friendID" 
                     v-bind:unAmiName="oneData.friendName"
                     v-bind:unAmiPhone="oneData.friendPhone"
@@ -11,7 +12,7 @@
 import OneFriend from '../../components/OneFriendEmit.vue';
 import { ref } from 'vue';
 
-const dataFromParent = [
+const dataFromParent = ref([
     {
         friendID: "lasticot",
         friendName: "Coco l'asticot",
@@ -41,7 +42,7 @@ const dataFromParent = [
         friendPremium: true
     },
     {
-        friendID: "yoyoyo",
+        friendID: "yoyoyo2",
         friendName: "JAROD",
         friendPhone: "+338765477",
         friendEmail: "JAROD@seagal.com",
@@ -61,5 +62,35 @@ const dataFromParent = [
         friendEmail: "JAROD@seagal.com",
         friendPremium: true
     },
-];
+]);
+
+function deleteFriend(friendID){
+    console.log("ID de l'ami à effacer : ", friendID);
+    console.log(dataFromParent.value);
+    
+    for (const data in dataFromParent.value) {
+        console.log(dataFromParent.value[data].friendID);
+        
+        if(dataFromParent.value[data].friendID == friendID){
+            
+            dataFromParent.value.splice(data, 1);
+            return;
+        }
+    }
+}
+
+function updatePremium(friendID){
+    console.log("Id de l'ami à passer en premium : ", friendID);
+    
+    for (const data in dataFromParent.value) {
+        console.log(dataFromParent.value[data].friendID);
+        
+        if(dataFromParent.value[data].friendID == friendID){
+            
+            dataFromParent.value[data].friendPremium = true;
+            console.log("Premium check : ", dataFromParent.value[data].friendPremium);
+            return;
+        }
+    }
+}
 </script>
