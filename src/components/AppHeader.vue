@@ -26,6 +26,7 @@
                 <li><router-link to="/lessons/lib_chartjs" class="btn btn-ghost">Lib Chartjs</router-link></li>
                 <li><router-link to="/lessons/props" class="btn btn-ghost">Props</router-link></li>
                 <li><router-link to="/lessons/router" class="btn btn-ghost">Router</router-link></li>
+                <li><router-link to="/lessons/emit" class="btn btn-ghost">Emit</router-link></li>
               </ul>
             </details>
           </li>

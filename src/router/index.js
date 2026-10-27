@@ -94,6 +94,10 @@ const router = createRouter({
             path: '/lessons/router',
             component: () => import('../views/lessons/lesson-router.vue')
         },
+        {
+            path: '/lessons/emit',
+            component: () => import('../views/lessons/lesson-emit.vue')
+        },
 
         //Exercices
         {
