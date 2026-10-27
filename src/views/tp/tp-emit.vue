@@ -1,4 +1,5 @@
 <template>
+    <NewFriend v-on:add-friend="addFriend" />
     <OneFriend v-on:delete-friend="deleteFriend" v-on:mon-event-premium-update="updatePremium"
     v-for="(oneData, index) in dataFromParent" :key="index"
                     v-bind:unAmiId="oneData.friendID" 
@@ -10,6 +11,7 @@
 
 <script setup lang='js'>
 import OneFriend from '../../components/OneFriendEmit.vue';
+import NewFriend from '../../components/NewFriend.vue';
 import { ref } from 'vue';
 
 const dataFromParent = ref([
@@ -91,6 +93,19 @@ function updatePremium(friendID){
             console.log("Premium check : ", dataFromParent.value[data].friendPremium);
             return;
         }
+    }
+}
+
+function addFriend(emitedName, emitedTel, emitedEmail){
+    console.log(emitedName, emitedTel, emitedEmail);
+    if(emitedName && emitedTel && emitedEmail){
+        dataFromParent.value.push({
+            friendID: dataFromParent.value.length,
+            friendName: emitedName,
+            friendPhone: emitedTel,
+            friendEmail: emitedEmail,
+            friendPremium: false
+        })
     }
 }
 </script>
