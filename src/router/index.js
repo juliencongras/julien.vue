@@ -234,6 +234,11 @@ const router = createRouter({
             path: '/tp/router_and_props/:id',
             component: () => import('../views/tp/tp-router-and-props-user-details.vue'),
             props: true
+        },
+        {
+            path: '/tp/emit',
+            component: () => import('../views/tp/tp-emit.vue'),
+            props: true
         }
 
     ]
