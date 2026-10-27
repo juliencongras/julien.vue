@@ -25,6 +25,7 @@
                 <li><router-link to="/lessons/lifecycle" class="btn btn-ghost">Lifecycle</router-link></li>
                 <li><router-link to="/lessons/lib_chartjs" class="btn btn-ghost">Lib Chartjs</router-link></li>
                 <li><router-link to="/lessons/props" class="btn btn-ghost">Props</router-link></li>
+                <li><router-link to="/lessons/router" class="btn btn-ghost">Router</router-link></li>
               </ul>
             </details>
           </li>
@@ -66,6 +67,7 @@
                 <li><router-link to="/corrections/watcher" class="btn btn-ghost">Watcher</router-link></li>
                 <li><router-link to="/corrections/tp_reactivite" class="btn btn-ghost">TP Reactivité</router-link></li>
                 <li><router-link to="/corrections/lifecycle_api" class="btn btn-ghost">Lifecycle API</router-link></li>
+                <li><router-link to="/corrections/props" class="btn btn-ghost">Props</router-link></li>
               </ul>
             </details>
           </li>

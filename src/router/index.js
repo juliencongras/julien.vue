@@ -90,6 +90,10 @@ const router = createRouter({
             path: '/lessons/props',
             component: () => import('../views/lessons/lesson-props.vue')
         },
+        {
+            path: '/lessons/router',
+            component: () => import('../views/lessons/lesson-router.vue')
+        },
 
         //Exercices
         {
@@ -185,6 +189,16 @@ const router = createRouter({
         {
             path: '/corrections/lifecycle_api',
             component: () => import('../views/corrections/correction-lifecycle-api.vue')
+        },
+        {
+            path: '/corrections/props',
+            component: () => import('../views/corrections/correction-props.vue')
+        },
+        {
+            path: '/corrections/details/:id/:itemName',
+            name: 'Details',
+            component: () => import('../components/DetailsPage.vue'),
+            props: true,
         },
 
         //TP
