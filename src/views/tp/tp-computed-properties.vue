@@ -5,14 +5,14 @@
         <div class="flex flex-row items-center justify-around text-center p-8">
             <div class="stats shadow-sm bg-base-200 border border-base-300 w-full">
               <div class="stat">
-                <div class="stat-title font-medium text-base-content/70">le nombre :</div>
-                <div class="stat-value font-extrabold text-5xl my-1">6</div>
+                <div class="stat-title font-medium text-base-content/70">Tickets affichés :</div>
+                <div class="stat-value font-extrabold text-5xl my-1">{{ filteredTickets.length }}</div>
               </div>
             </div>
             <div class="stats shadow-sm bg-base-200 border border-base-300 w-full">
               <div class="stat">
-                <div class="stat-title font-medium text-base-content/70">le nombre :</div>
-                <div class="stat-value text-error font-extrabold text-5xl my-1">6%</div>
+                <div class="stat-title font-medium text-base-content/70">Part de tickets urgents :</div>
+                <div class="stat-value text-error font-extrabold text-5xl my-1">0%</div>
               </div>
             </div>
         </div>
@@ -37,7 +37,7 @@
 
         <div>
             <p>Liste des incidents ()</p>
-            <div class="card bg-base-100 w-fit shadow-sm w-full m-3" v-for="(ticket, index) in tickets" :key="ticket.id">
+            <div class="card bg-base-100 w-fit shadow-sm w-full m-3" v-for="(ticket, index) in filteredTickets" :key="ticket.id">
               <div class="card-body flex flex-row justify-between">
                 <div class="p-1">
                     <div class="badge badge-neutral">{{ ticket.categorie }}</div>
@@ -55,7 +55,7 @@
 </template>
 
 <script setup lang='js'>
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
 
 // 1° Données initiales (Mock de tickets)
 const tickets = ref([
@@ -69,4 +69,10 @@ const tickets = ref([
 
 const ticketSearch = ref('');
 const priorityFilter = ref('');
+
+const filteredTickets = computed(() => {
+    console.log(ticketSearch.value);
+    
+    return tickets.value.filter((oneTicket) => (ticketSearch.value == null ? false:oneTicket.titre == ticketSearch.value) && (oneTicket.priorite == priorityFilter.value));
+});
 </script>
