@@ -246,6 +246,12 @@ const router = createRouter({
             component: () => import('../views/tp/tp-component-communication.vue'),
             props: true
         }
+        ,
+        {
+            path: '/tp/computed_properties',
+            component: () => import('../views/tp/tp-computed-properties.vue'),
+            props: true
+        }
 
     ]
 })
