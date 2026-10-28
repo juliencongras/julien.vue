@@ -4,7 +4,7 @@
         <ActiveUserTp 
         v-bind:user-name="parentUserData.name"
         v-bind:user-age="parentUserData.age" />
-        <UserDataTp />
+        <UserDataTp v-on:user-data-emit-update="updateUser" />
     </div>
 </template>
 
@@ -18,8 +18,11 @@ const parentUserData = ref({
     age: 43
 })
 
-function updateUser(){
-    
+function updateUser(emitedName, emitedAge){
+    console.log("Recieved name and age :", emitedName, emitedAge, "ans");
+    parentUserData.value.name = emitedName;
+    parentUserData.value.age = emitedAge;
+    console.log("Updated user data :", parentUserData.value);
 }
 
 </script>
