@@ -12,7 +12,7 @@
             <div class="stats shadow-sm bg-base-200 border border-base-300 w-full">
               <div class="stat">
                 <div class="stat-title font-medium text-base-content/70">Part de tickets urgents :</div>
-                <div class="stat-value text-error font-extrabold text-5xl my-1">0%</div>
+                <div class="stat-value text-error font-extrabold text-5xl my-1"> {{ highPriorityTicketsPercent }}%</div>
               </div>
             </div>
         </div>
@@ -26,7 +26,7 @@
             <div class="p-1">
                 <h2 class="card-title">Filtrer par priorité :</h2>
                 <select class="select" v-model="priorityFilter">
-                    <option selected>-- Toutes les priorités --</option>
+                    <option selected>Toutes les priorités</option>
                     <option>Haute</option>
                     <option>Moyenne</option>
                     <option>Basse</option>
@@ -69,10 +69,20 @@ const tickets = ref([
 
 const ticketSearch = ref('');
 const priorityFilter = ref('');
+const highPriorityTicketsPercent = ref('')
 
 const filteredTickets = computed(() => {
-    console.log(ticketSearch.value);
+    console.log("Value of prioeity filter :",priorityFilter.value.type);
     
-    return tickets.value.filter((oneTicket) => (ticketSearch.value == null ? false:oneTicket.titre == ticketSearch.value) && (oneTicket.priorite == priorityFilter.value));
+    let searchedArray = tickets.value;
+
+    if(ticketSearch.value){
+        searchedArray = searchedArray.filter((oneSearched) => oneSearched.titre == ticketSearch.value)
+    }
+    if(priorityFilter.value != ("Toutes les priorités" || false)){
+        searchedArray = searchedArray.filter((oneSearched) => oneSearched.priorite == priorityFilter.value)
+    }
+
+    return searchedArray;
 });
 </script>
