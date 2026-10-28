@@ -2,6 +2,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 //! Cette route HOME (qui est un composant vue) on importe ici et on va l'utiliser dans notre routeur
 import Home from '../views/Home.vue';
+import { auth } from '../firebase.js';
 
 const router = createRouter({
     history: createWebHistory(),
@@ -243,4 +244,9 @@ const router = createRouter({
 
     ]
 })
+
+router.beforeEach(async (to) => {
+    //await auth.authStateReady
+})
+
 export default router
