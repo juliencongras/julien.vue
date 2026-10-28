@@ -1,5 +1,5 @@
 <template>
-    <div class="card bg-base-100 shadow-xl rounded-box p-6">
+    <div class="card bg-base-100 shadow-xl rounded-box w-fit">
         <div class="card-body text-center">
             <h2 class="text-2xl font-bold mb-6">Composant affichage des données utilisateur</h2>
             <p>{{ userName }}</p>
