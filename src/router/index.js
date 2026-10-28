@@ -240,6 +240,11 @@ const router = createRouter({
             path: '/tp/emit',
             component: () => import('../views/tp/tp-emit.vue'),
             props: true
+        },
+        {
+            path: '/tp/component_communication',
+            component: () => import('../views/tp/tp-component-communication.vue'),
+            props: true
         }
 
     ]

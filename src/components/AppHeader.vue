@@ -85,6 +85,7 @@
                 <li><router-link to="/tp/jeu_tour_par_tour" class="btn btn-ghost">Jeu tour par tour</router-link></li>
                 <li><router-link to="/tp/router_and_props" class="btn btn-ghost">Router and props</router-link></li>
                 <li><router-link to="/tp/emit" class="btn btn-ghost">Emit</router-link></li>
+                <li><router-link to="/tp/component_communication" class="btn btn-ghost">Component communication</router-link></li>
               </ul>
             </details>
           </li>
