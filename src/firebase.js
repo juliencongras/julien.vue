@@ -1,23 +1,20 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getDatabase } from "firebase/database";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCNQsgrUrbLh68OwOoA68RnvBALnfoKBfQ",
-  authDomain: "super-fire-40e86.firebaseapp.com",
-  databaseURL: "https://super-fire-40e86-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "super-fire-40e86",
-  storageBucket: "super-fire-40e86.firebasestorage.app",
-  messagingSenderId: "847452218572",
-  appId: "1:847452218572:web:7a2db9abfe02f300d7ce69"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  databaseURL: import.meta.env.VITE_FIREBASE_DATABASE_URL,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
-// Initialize Firebase
+// Initialiser Firebase
 const app = initializeApp(firebaseConfig);
 
+// Exporter le service d'authentification pour l'utiliser dans les composants
 export const auth = getAuth(app);
-export const database = getDatabase(app);
+export const database = getDatabase(app); // Exporter l'instance de la base de données
