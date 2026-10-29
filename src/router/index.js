@@ -99,6 +99,10 @@ const router = createRouter({
             path: '/lessons/emit',
             component: () => import('../views/lessons/lesson-emit.vue')
         },
+        {
+            path: '/lessons/marked',
+            component: () => import('../views/lessons/lesson-lib-marked.vue')
+        },
 
         //Exercices
         {
