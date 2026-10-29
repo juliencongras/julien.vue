@@ -28,6 +28,7 @@
                 <li><router-link to="/lessons/router" class="btn btn-ghost">Router</router-link></li>
                 <li><router-link to="/lessons/emit" class="btn btn-ghost">Emit</router-link></li>
                 <li><router-link to="/lessons/marked" class="btn btn-ghost">Marked</router-link></li>
+                <li><router-link to="/lessons/pinia" class="btn btn-ghost">Pinia</router-link></li>
               </ul>
             </details>
           </li>

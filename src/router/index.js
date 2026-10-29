@@ -103,6 +103,10 @@ const router = createRouter({
             path: '/lessons/marked',
             component: () => import('../views/lessons/lesson-lib-marked.vue')
         },
+        {
+            path: '/lessons/pinia',
+            component: () => import('../views/lessons/lesson-lib-pinia.vue')
+        },
 
         //Exercices
         {
