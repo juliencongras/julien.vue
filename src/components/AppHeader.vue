@@ -69,6 +69,7 @@
                 <li><router-link to="/corrections/tp_reactivite" class="btn btn-ghost">TP Reactivité</router-link></li>
                 <li><router-link to="/corrections/lifecycle_api" class="btn btn-ghost">Lifecycle API</router-link></li>
                 <li><router-link to="/corrections/props" class="btn btn-ghost">Props</router-link></li>
+                <li><router-link to="/corrections/dashboard" class="btn btn-ghost">Dashboard</router-link></li>
               </ul>
             </details>
           </li>

@@ -205,6 +205,12 @@ const router = createRouter({
             component: () => import('../components/DetailsPage.vue'),
             props: true,
         },
+        {
+            path: '/corrections/dashboard',
+            name: 'Details',
+            component: () => import('../views/corrections/correction-tp-dashboard.vue'),
+            props: true,
+        },
 
         //TP
         {
