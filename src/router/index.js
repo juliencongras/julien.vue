@@ -270,8 +270,33 @@ const router = createRouter({
     ]
 })
 
-router.beforeEach(async (to) => {
-    //await auth.authStateReady
-})
+/*
+// Navigation guard pour vérifier l'authentification avant d'accéder aux routes protégées
+// (Middleware)
+router.beforeEach(async (to, from, next) => {
+  // Vérifie si la route nécessite une authentification
+  const requiresAuth = to.matched.some((record) => record.meta.requiresAuth);
+  // Récupère l'utilisateur actuel de manière asynchrone
+  const currentUser = await getCurrentUser();
+  // Si la route nécessite une authentification et que l'utilisateur n'est pas connecté, redirige vers la page d'authentification
+  if (requiresAuth && !currentUser) {
+    return "/auth/login";
+  }
+  // Sinon, continue vers la route demandée
+  next();
+});
+
+et ensuite sur les routes que vous voulez protéger par une connexion on la configure comme ceci 
+(avec requiresAuth : true dans les métadonnées)
+{
+    path:'/admin',
+    name:'admin',
+    component: () => import('../views/auth/AdminDashBoard.vue'),
+    meta:{
+        requiresAuth : true
+    }
+},
+
+*/
 
 export default router
